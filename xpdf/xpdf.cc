@@ -16,7 +16,8 @@
 #include "Object.h"
 #include "XPDFApp.h"
 #include "config.h"
-
+#include <sys/stat.h>
+#include <sys/types.h>
 //------------------------------------------------------------------------
 #include "PageNumberStorage.h"
 //------------------------------------------------------------------------
@@ -334,6 +335,7 @@ int main(int argc, char *argv[]) {
   Object::memCheck(stderr);
   gMemReport(stderr);
 
+  mkdir((std::string(getenv("HOME")) + "/.xpdf").c_str(), 0700);
   save_page_numbers();
   return exitCode;
 }
