@@ -746,7 +746,7 @@ GlobalParams::GlobalParams(const char *cfgFileName) {
 #endif
   textPageBreaks = gTrue;
   textKeepTinyChars = gTrue;
-  initialZoom = new GString("125");
+  initialZoom = new GString("fit width");
   continuousView = gFalse;
   enableFreeType = gTrue;
   disableFreeTypeHinting = gFalse;
