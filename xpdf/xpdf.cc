@@ -18,6 +18,8 @@
 #include "config.h"
 
 //------------------------------------------------------------------------
+#include "PageNumberStorage.h"
+//------------------------------------------------------------------------
 // command line options
 //------------------------------------------------------------------------
 
@@ -235,8 +237,10 @@ int main(int argc, char *argv[]) {
     exitCode = 99;
     goto done1;
   }
+  load_page_numbers();
   if (argc >= 2) {
     fileName = new GString(argv[1]);
+    current_filename() = argv[1];
   } else {
     fileName = NULL;
   }
@@ -330,5 +334,6 @@ int main(int argc, char *argv[]) {
   Object::memCheck(stderr);
   gMemReport(stderr);
 
+  save_page_numbers();
   return exitCode;
 }

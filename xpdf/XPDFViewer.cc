@@ -130,7 +130,7 @@
 #include "printDis.xbm"
 #include "about.xbm"
 #include "about-text.h"
-
+#include "PageNumberStorage.h"
 //------------------------------------------------------------------------
 
 struct ZoomMenuInfo {
@@ -276,6 +276,8 @@ XPDFViewer::XPDFViewer(XPDFApp *appA, GString *fileName,
   if (fileName) {
     if (loadFile(fileName, ownerPassword, userPassword)) {
       getPageAndDest(pageA, destName, &pg, &dest);
+      current_filename() = fileName->getCString();
+      pg = current_page();
 #ifndef DISABLE_OUTLINE
       if (outlineScroll != None &&
 	  core->getDoc()->getOutline()->getItems() &&

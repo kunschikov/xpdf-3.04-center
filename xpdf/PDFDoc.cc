@@ -38,6 +38,7 @@
 #endif
 #include "OptionalContent.h"
 #include "PDFDoc.h"
+#include "PageNumberStorage.h"
 
 //------------------------------------------------------------------------
 
@@ -378,6 +379,7 @@ void PDFDoc::displayPage(OutputDev *out, int page,
 			 GBool useMediaBox, GBool crop, GBool printing,
 			 GBool (*abortCheckCbk)(void *data),
 			 void *abortCheckCbkData) {
+  current_page() = page;
   if (globalParams->getPrintCommands()) {
     printf("***** page %d *****\n", page);
   }

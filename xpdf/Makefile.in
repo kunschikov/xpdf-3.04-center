@@ -113,6 +113,7 @@ CXX_SRC = \
 	$(srcdir)/pdftoppm.cc \
 	$(srcdir)/pdftopng.cc \
 	$(srcdir)/pdfimages.cc \
+	$(srcdir)/PageNumberStorage.cc \
 	$(srcdir)/xpdf.cc
 
 #------------------------------------------------------------------------
@@ -179,6 +180,7 @@ XPDF_OBJS = \
 	XpdfPluginAPI.o \
 	XRef.o \
 	Zoox.o \
+	PageNumberStorage.o \
 	xpdf.o
 XPDF_LIBS = -L$(GOOLIBDIR) -lGoo $(SPLASHLIBS) $(FTLIBS) \
 	$(XLIBS) $(OTHERLIBS) -lm
@@ -233,6 +235,7 @@ PDFTOPS_OBJS = \
 	XpdfPluginAPI.o \
 	XRef.o \
 	Zoox.o \
+	PageNumberStorage.o \
 	pdftops.o
 PDFTOPS_LIBS = -L$(GOOLIBDIR) -lGoo $(SPLASHLIBS) $(FTLIBS) \
 	$(OTHERLIBS) -lm
@@ -287,6 +290,7 @@ PDFTOTEXT_OBJS = \
 	XpdfPluginAPI.o \
 	XRef.o \
 	Zoox.o \
+	PageNumberStorage.o \
 	pdftotext.o
 PDFTOTEXT_LIBS = -L$(GOOLIBDIR) -lGoo $(OTHERLIBS) -lm
 
@@ -342,6 +346,7 @@ PDFTOHTML_OBJS = \
 	XpdfPluginAPI.o \
 	XRef.o \
 	Zoox.o \
+	PageNumberStorage.o \
 	pdftohtml.o
 PDFTOHTML_LIBS = -L$(GOOLIBDIR) -lGoo $(SPLASHLIBS) $(FTLIBS) \
 	$(OTHERLIBS) $(PNGLIBS) -lm
@@ -394,6 +399,7 @@ PDFINFO_OBJS = \
 	XpdfPluginAPI.o \
 	XRef.o \
 	Zoox.o \
+	PageNumberStorage.o \
 	pdfinfo.o
 PDFINFO_LIBS = -L$(GOOLIBDIR) -lGoo $(OTHERLIBS) -lm
 
@@ -445,6 +451,7 @@ PDFFONTS_OBJS = \
 	XpdfPluginAPI.o \
 	XRef.o \
 	Zoox.o \
+	PageNumberStorage.o \
 	pdffonts.o
 PDFFONTS_LIBS = -L$(GOOLIBDIR) -lGoo $(OTHERLIBS) -lm
 
@@ -496,6 +503,7 @@ PDFDETACH_OBJS = \
 	XpdfPluginAPI.o \
 	XRef.o \
 	Zoox.o \
+	PageNumberStorage.o \
 	pdfdetach.o
 PDFDETACH_LIBS = -L$(GOOLIBDIR) -lGoo $(OTHERLIBS) -lm
 
@@ -550,6 +558,7 @@ PDFTOPPM_OBJS = \
 	XpdfPluginAPI.o \
 	XRef.o \
 	Zoox.o \
+	PageNumberStorage.o \
 	pdftoppm.o
 PDFTOPPM_LIBS = -L$(GOOLIBDIR) -lGoo $(SPLASHLIBS) $(FTLIBS) \
 	$(OTHERLIBS) -lm
@@ -605,6 +614,7 @@ PDFTOPNG_OBJS = \
 	XpdfPluginAPI.o \
 	XRef.o \
 	Zoox.o \
+	PageNumberStorage.o \
 	pdftopng.o
 PDFTOPNG_LIBS = -L$(GOOLIBDIR) -lGoo $(SPLASHLIBS) $(FTLIBS) \
 	$(OTHERLIBS) $(PNGLIBS) -lm
@@ -658,6 +668,7 @@ PDFIMAGES_OBJS = \
 	XpdfPluginAPI.o \
 	XRef.o \
 	Zoox.o \
+	PageNumberStorage.o \
 	pdfimages.o
 PDFIMAGES_LIBS = -L$(GOOLIBDIR) -lGoo $(OTHERLIBS) -lm
 
