@@ -1,5 +1,7 @@
 Xpdf
 ====
+Modified to remember current page number for all of the opened files and has zoom value 'fit width' by default, by Kunschikov
+************
 
 Modified to scroll center by the 'c' shortcut, by skcho.
 
@@ -229,7 +231,7 @@ Various people have contributed modifications made for use by the
 pdftex project:
 
 * Han The Thanh
-* Martin Schröder of ArtCom GmbH
+* Martin SchrÃ¶der of ArtCom GmbH
 
 
 References
